@@ -15,5 +15,6 @@ class LoginController extends Controller
         if(!auth()->attempt($request->only('email','password'))){
             throw new AuthenticationException();
         }
+
     }
 }
