@@ -12,7 +12,7 @@ class LoginController extends Controller
      * @throws AuthenticationException
      */
     public function __invoke(Request $request){
-        if(!auth()->attempt($request->only('email','password'))){
+        if(!auth()->attempt($request->only('emaillok','password'))){
             throw new AuthenticationException();
         }
     }
